@@ -1,0 +1,27 @@
+[package]
+name = "kv-store"
+version = "0.1.0"
+edition = "2021"
+
+authors = ["Abhinav Gupta <abhinav.g@columbia.edu>"]
+description = "A Key Value store written in Rust using machnet"
+license = "MIT"
+categories= ["networking","dpdk"]
+keywords = ["networking","dpdk"]
+
+[dependencies]
+log = "0.4"
+env_logger = "0.9"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+ctrlc = "3.2"
+rand = "0.8"
+machnet = "0.1.9"
+
+[[bin]]
+name = "server"
+path = "src/bin/server.rs"
+
+[[bin]]
+name = "client"
+path = "src/bin/client.rs"
