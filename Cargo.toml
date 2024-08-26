@@ -1,8 +1,7 @@
 [package]
-name = "kv-store"
+name = "kv_store"
 version = "0.1.0"
 edition = "2021"
-
 authors = ["Abhinav Gupta <abhinav.g@columbia.edu>"]
 description = "A Key Value store written in Rust using machnet"
 license = "MIT"

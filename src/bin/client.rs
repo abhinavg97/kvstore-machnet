@@ -54,6 +54,7 @@ fn main() -> Result<(), KVStoreError> {
     }).map_err(|e| KVStoreError::MachnetError(e.to_string()))?;
     
     while *running.lock().unwrap() {
+        // 70 % probability of write operation
         if thread_rng().gen_bool(0.7) {
             // Write operation
             let key = generate_random_string(8);
